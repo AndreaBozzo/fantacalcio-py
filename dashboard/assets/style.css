@@ -1,0 +1,318 @@
+/* 📊 FANTACALCIO DASHBOARD - CLEAN MINIMAL THEME */
+
+/* Import clean fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Core Colors */
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary: #10b981;
+    --accent: #f59e0b;
+    
+    /* Role Colors */
+    --goalkeeper: #ef4444;
+    --defender: #22c55e; 
+    --midfielder: #3b82f6;
+    --attacker: #f97316;
+    
+    /* Neutrals */
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-600: #4b5563;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+    
+    /* Shadows */
+    --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* Global */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--gray-50);
+    color: var(--gray-900);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.container-fluid {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+/* Typography */
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 0.5rem;
+}
+
+.text-primary { color: var(--primary) !important; }
+.text-muted { color: var(--gray-600) !important; }
+.lead { font-size: 1.125rem; color: var(--gray-600); }
+
+/* Navigation */
+.navbar {
+    background: white !important;
+    border-bottom: 1px solid var(--gray-200);
+    box-shadow: var(--shadow);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--primary) !important;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--gray-600) !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary) !important;
+    background-color: var(--gray-100);
+}
+
+/* Cards */
+.card {
+    background: white;
+    border: 1px solid var(--gray-200);
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    background: var(--gray-50);
+    border-bottom: 1px solid var(--gray-200);
+    font-weight: 600;
+    color: var(--gray-900);
+    padding: 1rem 1.5rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Metric Cards */
+.metric-card {
+    background: white;
+    border: 1px solid var(--gray-200);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all 0.2s;
+}
+
+.metric-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary);
+}
+
+.metric-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin: 0.5rem 0;
+}
+
+.metric-label {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.025em;
+    margin: 0;
+}
+
+/* Buttons */
+.btn {
+    font-weight: 500;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-outline-light {
+    border: 1px solid var(--gray-300);
+    color: var(--gray-600);
+    background: white;
+}
+
+.btn-outline-light:hover {
+    background-color: var(--gray-100);
+    border-color: var(--gray-400);
+}
+
+/* Forms */
+.form-control, .form-select {
+    border: 1px solid var(--gray-300);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgb(37 99 235 / 0.1);
+}
+
+/* Tables */
+.table {
+    background: white;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.table thead th {
+    background-color: var(--gray-50);
+    color: var(--gray-900);
+    font-weight: 600;
+    font-size: 0.875rem;
+    border-bottom: 1px solid var(--gray-200);
+    padding: 0.75rem;
+}
+
+.table tbody tr:hover {
+    background-color: var(--gray-50);
+}
+
+.table td {
+    padding: 0.75rem;
+    border-color: var(--gray-200);
+}
+
+/* AG Grid */
+.ag-theme-alpine {
+    --ag-foreground-color: var(--gray-900);
+    --ag-background-color: white;
+    --ag-header-background-color: var(--gray-50);
+    --ag-odd-row-background-color: var(--gray-50);
+    --ag-border-color: var(--gray-200);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+/* Alerts */
+.alert {
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.75rem 1rem;
+}
+
+.alert-success {
+    background-color: rgb(34 197 94 / 0.1);
+    color: rgb(21 128 61);
+}
+
+/* Charts */
+.plotly-graph-div {
+    border-radius: 0.75rem;
+    background: white;
+}
+
+/* Range Slider Fix */
+.rc-slider {
+    margin: 1rem 0;
+    position: relative;
+}
+
+.rc-slider-rail {
+    background-color: var(--gray-200);
+    height: 4px;
+    border-radius: 2px;
+}
+
+.rc-slider-track {
+    background-color: var(--primary);
+    height: 4px;
+    border-radius: 2px;
+}
+
+.rc-slider-handle {
+    border: 2px solid var(--primary);
+    background-color: white;
+    width: 16px;
+    height: 16px;
+    margin-top: -6px;
+    box-shadow: var(--shadow);
+}
+
+.rc-slider-handle:hover, .rc-slider-handle:focus {
+    border-color: var(--primary-dark);
+    box-shadow: var(--shadow-md);
+}
+
+/* Dropdown (React Select) */
+.Select__control {
+    border: 1px solid var(--gray-300) !important;
+    border-radius: 0.5rem !important;
+    min-height: 38px !important;
+    box-shadow: none !important;
+}
+
+.Select__control:hover {
+    border-color: var(--gray-400) !important;
+}
+
+.Select__control--is-focused {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 3px rgb(37 99 235 / 0.1) !important;
+}
+
+/* Role colors */
+.text-goalkeeper { color: var(--goalkeeper) !important; }
+.text-defender { color: var(--defender) !important; }
+.text-midfielder { color: var(--midfielder) !important; }
+.text-attacker { color: var(--attacker) !important; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 1.75rem;
+    }
+    
+    .metric-card {
+        padding: 1rem;
+    }
+    
+    .metric-value {
+        font-size: 1.5rem;
+    }
+}
+
+/* Utilities */
+.mb-2 { margin-bottom: 0.5rem !important; }
+.mb-3 { margin-bottom: 1rem !important; }
+.mb-4 { margin-bottom: 1.5rem !important; }
+.text-center { text-align: center !important; }
